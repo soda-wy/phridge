@@ -5,7 +5,9 @@
   "main": "./lib/main.js",
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha -R spec",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha"
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "phantom",
@@ -22,7 +24,8 @@
     "linerstream": "^0.1.4",
     "phantomjs": "^1.9.7-15",
     "temp": "^0.8.0",
-    "when": "^3.4.2"
+    "when": "^3.4.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "^1.9.1",
@@ -36,5 +39,6 @@
     "url": "https://github.com/peerigon/phridge.git"
   },
   "author": "peerigon <developers@peerigon.com>",
-  "license": "Unlicense"
+  "license": "Unlicense",
+  "snyk": true
 }
